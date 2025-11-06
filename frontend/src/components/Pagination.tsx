@@ -17,13 +17,13 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
         disabled={currentPage === 1}
         className="px-3 py-1 mx-1 border rounded-md bg-white disabled:opacity-50"
       >
-        Previous
+        &lt;
       </button>
       {pageNumbers.map(number => (
         <button
           key={number}
           onClick={() => onPageChange(number)}
-          className={`px-3 py-1 mx-1 border rounded-md ${currentPage === number ? 'bg-gray-300' : 'bg-white'}`}
+          className={`px-3 py-1 mx-1 border rounded-md ${currentPage === number ? 'bg-green-500 text-white' : 'bg-white'}`}
         >
           {number}
         </button>
@@ -33,7 +33,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
         disabled={currentPage === totalPages}
         className="px-3 py-1 mx-1 border rounded-md bg-white disabled:opacity-50"
       >
-        Next
+        &gt;
       </button>
     </div>
   );
