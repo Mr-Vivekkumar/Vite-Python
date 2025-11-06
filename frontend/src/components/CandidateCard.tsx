@@ -9,6 +9,7 @@ interface CandidateCardProps {
 export function CandidateCard({ candidate }: CandidateCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+  const [showActionsMenu, setShowActionsMenu] = useState(false);
 
   return (
     <div className="border-b border-gray-200">
@@ -34,7 +35,27 @@ export function CandidateCard({ candidate }: CandidateCardProps) {
             </div>
           </button>
           {candidate.status !== 'Rejected' && (
-            <button onClick={() => setShowFeedbackModal(true)} className="text-green-500 font-semibold">Collect Feedback</button>
+            <div className="relative">
+              <button
+                aria-label="Actions"
+                className="p-2 rounded hover:bg-gray-100"
+                onClick={() => setShowActionsMenu(prev => !prev)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h.01M12 12h.01M19 12h.01" />
+                </svg>
+              </button>
+              {showActionsMenu && (
+                <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50"
+                    onClick={() => { setShowFeedbackModal(true); setShowActionsMenu(false); }}
+                  >
+                    Collect Feedback
+                  </button>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>
