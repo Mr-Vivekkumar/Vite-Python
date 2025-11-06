@@ -10,7 +10,7 @@ export function CandidateCard({ candidate }: CandidateCardProps) {
 
   return (
     <div className="border-b border-gray-200">
-      <div className="px-6 py-4 grid grid-cols-2 items-center">
+      <div className="px-6 py-4 grid grid-cols-3 items-center">
         <div>
           <p className="font-semibold text-lg">{candidate.name}</p>
           <p className="text-gray-500">{candidate.company}</p>

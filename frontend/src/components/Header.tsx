@@ -26,8 +26,9 @@ export function Header() {
           </svg>
         </button>
         <button className="p-2 rounded-full hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4 0 1.105-.448 2.105-1.172 2.828a.5.5 0 00.172.828l.29.116c.33.132.33.62 0 .752l-.29.116a.5.5 0 00-.172.828A3.982 3.982 0 0112 20c-2.21 0-4-1.79-4-4 0-1.105.448-2.105 1.172-2.828a.5.5 0 00-.172-.828l-.29-.116c-.33-.132-.33-.62 0-.752l.29-.116a.5.5 0 00.172-.828zM12 18a.5.5 0 00.5-.5v-.008a.5.5 0 00-.5-.5h-.008a.5.5 0 00-.5.5v.008a.5.5 0 00.5.5z" />
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="white" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" strokeWidth="2" />
+            <text x="12" y="16" textAnchor="middle" className="fill-black text-sm font-light">?</text>
           </svg>
         </button>
         <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-white font-bold">AC</div>

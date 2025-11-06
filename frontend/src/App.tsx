@@ -6,7 +6,7 @@ import { Sidebar } from './components/Sidebar';
 import { CandidateCard } from './components/CandidateCard';
 import { Pagination } from './components/Pagination';
 
-const CANDIDATES_PER_PAGE = 10;
+const CANDIDATES_PER_PAGE = 5;
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
@@ -53,7 +53,7 @@ function App() {
           <div className="border-t border-b border-gray-200 bg-gray-50 px-6 py-3 text-sm font-medium text-gray-500 grid grid-cols-3">
             <div>Name</div>
             <div>Job/Status</div>
-            <div>Actions</div>
+            {/* <div>Actions</div> */}
           </div>
 
           <div>
